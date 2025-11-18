@@ -40,11 +40,20 @@
                     top: -10%;
                 }
             }
-
             &.craneCarry {
                 top: -100%;
             }
 
+            &.craneDownDeep {
+                top: -28vh;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    top: -2%;
+                }
+            }
+            &.craneUpDeep {
+                top: -100%;
+            }
             .icon1 {
                 position: absolute;
                 top: 0;
@@ -54,9 +63,6 @@
                 height: pxToRem(272);
                 z-index: 2;
 
-                @media screen and (min-width: $toggleTablet) {
-
-                }
                 @media screen and (min-width: $toggleDesktop) {
                     top: pxToRem(-40);
                     left: 50%;
@@ -145,7 +151,6 @@
                         width: 100%;
                     }
 
-                    /* Дом стоит на земле */
                     &.moduleDrop,
                     &.modulePlaced {
                         top: pxToRem(115);
@@ -155,23 +160,19 @@
                         }
                     }
 
-                    /* 🔥 Медленное качание при падении */
                     &.moduleDrop {
                         animation: swing 1.6s ease-in-out infinite;
                     }
 
-                    /* 🔥 Медленное качание при подъеме */
                     &.moduleLift {
                         top: -100%;
                         animation: swing 1.6s ease-in-out infinite;
                     }
 
-                    /* Без качания после установки */
                     &.modulePlaced {
                         animation: none;
                     }
 
-                    /* Медленный swing */
                     @keyframes swing {
                         0%   { transform: rotate(-1.5deg); }
                         50%  { transform: rotate(1.5deg); }
