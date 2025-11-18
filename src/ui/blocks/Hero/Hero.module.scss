@@ -388,6 +388,7 @@
                     top: initial;
                     flex-direction: column;
                     transform: initial;
+                    gap: pxToRem(16);
                 }
 
                 button {
@@ -444,6 +445,7 @@
                         font-size: pxToRem(24);
                     }
                     @media screen and (min-width: $toggleDesktop) {
+                        padding: 0;
                         font-size: pxToRem(46);
                         letter-spacing: pxToRem(-1.38);
                         color: #B0B0B0;
