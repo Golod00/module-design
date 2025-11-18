@@ -1,0 +1,46 @@
+@function pxToRem($px, $base: 16) {
+    @return ($px / $base) * 1rem;
+}
+
+// Colors
+$color-primary: #191919;
+$color-white: #fff;
+$bg-primary: #191919;
+
+$transition: all .3s ease-in;
+
+
+// Fonts
+$font-main: 'NAMU', sans-serif;
+
+//Trigers
+$toggleTablet: 768px;
+$toggleDesktop: 1240px;
+
+@mixin container {
+    margin: 0 auto;
+    
+    @media screen and (min-width: $toggleTablet) {
+    }
+
+    @media screen and (min-width: $toggleDesktop) {
+    }
+}
+
+@mixin customScrollerPad {
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-accent;
+    }
+    & * {
+        scrollbar-width: thin;
+        scrollbar-color: $color-accent transparent;
+    }
+}

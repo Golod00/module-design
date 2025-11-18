@@ -1,0 +1,338 @@
+.heroSection {
+
+    .main {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(24);
+
+        @media screen and (min-width: $toggleTablet) {
+            height: 100vh;
+            padding-bottom: pxToRem(40);
+        }
+        @media screen and (min-width: $toggleDesktop) {
+            flex-direction: row;
+            gap: pxToRem(125);
+            padding-bottom: pxToRem(0);
+        }
+
+        .animationBlock {
+            position: absolute;
+            top: -7%;
+            width: 97%;
+            transition: top 1s ease;
+
+            @media screen and (min-width: $toggleTablet) {
+                left: 0;
+            }
+            @media screen and (min-width: $toggleDesktop) {
+
+            }
+
+            &.craneDown,
+            &.craneUp {
+                top: -29%;
+
+                @media screen and (min-width: $toggleTablet) {
+                    top: -23%;
+                }
+                @media screen and (min-width: $toggleDesktop) {
+                    top: -4%;
+                }
+            }
+
+            &.craneCarry {
+                top: -100%;
+            }
+
+            .icon1 {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: pxToRem(96);
+                height: pxToRem(272);
+                z-index: 2;
+
+                @media screen and (min-width: $toggleTablet) {
+
+                }
+                @media screen and (min-width: $toggleDesktop) {
+                    top: -10%;
+                    left: 51%;
+                }
+            }
+
+            .icon2 {
+                position: absolute;
+                top: pxToRem(180);
+                left: 49%;
+                transform: translateX(-50%);
+                width: 100%;
+                height: pxToRem(199);
+                z-index: 10;
+
+                @media screen and (min-width: $toggleTablet) {
+                    left: 52%;
+                    width: pxToRem(360);
+                }
+                @media screen and (min-width: $toggleDesktop) {
+                    left: 51%;
+                    width: 100%;
+                    height: pxToRem(225);
+                }
+            }
+        }
+
+        .wrapContainer {
+            @media screen and (min-width: $toggleDesktop) {
+                position: relative;
+                width: 59vw;
+            }
+
+            .wrapImage {
+                position: relative;
+
+                @media screen and (min-width: $toggleDesktop) {
+                    height: 100%;
+                }
+
+                .bg {
+                    height: pxToRem(400);
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        height: 100%;
+                    }
+                }
+
+                .animationImage {
+                    position: absolute;
+                    top: -100%;
+                    left: 0;
+                    transition: top 1s ease;
+
+                    @media screen and (min-width: $toggleTablet) {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    @media screen and (min-width: $toggleDesktop) {
+                        transform: inherit;
+                    }
+
+                    &.moduleDrop {
+                        top: pxToRem(115);
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            top: pxToRem(345);
+                        }
+                    }
+
+                    &.modulePlaced {
+                        top: pxToRem(115);
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            top: pxToRem(345);
+                        }
+                    }
+
+                    &.moduleLift {
+                        top: -100%;
+                    }
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        bottom: pxToRem(277);
+                        left: 2.5vw;
+
+                        .imageA {
+                            width: 48vw;
+                        }
+
+                        &.animationImageDop {
+                            bottom: pxToRem(100);
+                            left: 1vw;
+
+                            .imageB {
+                                width: 50vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .content {
+            padding-bottom: pxToRem(20);
+
+            @media screen and (min-width: $toggleTablet) {
+                width: 100vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-bottom: 0;
+            }
+            @media screen and (min-width: $toggleDesktop) {
+                width: 41vw;
+                padding: pxToRem(82) 0 pxToRem(112);
+            }
+
+            .contentWrap {
+
+                .logoWrap {
+                    margin-bottom: pxToRem(18);
+
+                    @media screen and (min-width: $toggleDesktop) {
+                        margin-bottom: pxToRem(24);
+                    }
+
+                    svg {
+                        width: pxToRem(70);
+                        height: pxToRem(40);
+
+                        @media screen and (min-width: $toggleTablet) {
+                            width: pxToRem(92);
+                            height: pxToRem(60);
+                        }
+                    }
+                }
+
+                .title {
+                    margin-bottom: pxToRem(16);
+                    font-family: "SF Pro Display";
+                    font-weight: 400;
+                    font-size: pxToRem(48);
+                    line-height: 100%;
+                    letter-spacing: pxToRem(-1.44);
+                    color: $color-primary;
+
+                    @media screen and (min-width: $toggleTablet) {
+                        max-width: pxToRem(505);
+                        font-size: pxToRem(68);
+                        letter-spacing: pxToRem(-2.04);
+                    }
+                }
+
+                .text {
+                    margin-bottom: pxToRem(16);
+                    font-family: "SF Pro Display";
+                    font-size: pxToRem(20);
+                    font-weight: 400;
+                    line-height: 100%;
+                    letter-spacing: pxToRem(-0.6);
+                    color: $color-primary;
+
+                    @media screen and (min-width: $toggleTablet) {
+                        font-size: pxToRem(24);
+                        letter-spacing: pxToRem(-0.72);
+                    }
+                }
+
+                .linksBtn {
+                    display: flex;
+
+                    .link {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: pxToRem(130);
+                        height: pxToRem(46);
+                        margin-bottom: pxToRem(16);
+                        font-family: "SF Pro Display";
+                        font-size: pxToRem(14);
+                        font-weight: 400;
+                        line-height: 100%;
+                        letter-spacing: pxToRem(-0.42);
+                        transition: $transition;
+                        cursor: pointer;
+
+                        @media screen and (min-width: $toggleTablet) {
+                            font-size: pxToRem(16);
+                            letter-spacing: pxToRem(-0.48);
+                        }
+
+                        &.linkCall {
+                            color: $color-white;
+                            background: $bg-primary;
+
+                            &:hover {
+                                border: 1px solid $color-primary;
+                                color: $bg-primary;
+                                background: transparent;
+                            }
+                        }
+
+                        &.linkWrite {
+                            margin-left: pxToRem(-1);
+                            border: 1px solid $color-primary;
+                            color: $color-primary;
+
+                            &:hover {
+                                color: $color-white;
+                                background: $bg-primary;
+                            }
+                        }
+                    }
+                }
+
+                .socialWrap {
+                    display: flex;
+                    align-items: center;
+                    column-gap: pxToRem(8);
+
+                    .linkSocial {
+                        transition: $transition;
+
+                        svg {
+                            width: pxToRem(32);
+                            height: pxToRem(32);
+                        }
+
+                        &:hover {
+
+                            svg {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+            .tabs {
+                position: absolute;
+                top: pxToRem(121);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: pxToRem(16);
+                z-index: 10;
+
+                @media screen and (min-width: $toggleTablet) {
+                    position: initial;
+                    top: initial;
+                }
+
+                button {
+                    font-family: "SF Pro Display";
+                    font-size: pxToRem(20);
+                    font-weight: 400;
+                    line-height: 100%;
+                    letter-spacing: pxToRem(-0.6);
+                    color: #B0B0B0;
+                    background: transparent;
+                    cursor: pointer;
+
+                    &.active {
+                        color: $color-primary;
+                    }
+
+                    @media screen and (min-width: $toggleTablet) {
+                        font-size: pxToRem(46);
+                        letter-spacing: pxToRem(-1.38);
+                    }
+                    @media screen and (min-width: $toggleDesktop) {
+
+                    }
+                }
+            }
+        }
+    }
+}
