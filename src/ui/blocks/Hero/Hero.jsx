@@ -201,7 +201,7 @@ export default function Hero() {
                             onClick={() => handleChangeTab("hotels")}
                             type="button"
                         >
-                            Готелі/котеджі
+                            Готелі/котеджні містечка
                         </button>
                     </div>
                 </div>
