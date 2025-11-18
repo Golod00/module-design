@@ -201,6 +201,7 @@
                     margin-bottom: pxToRem(16);
                     font-family: "SF Pro Display";
                     font-weight: 400;
+                    font-style: normal;
                     font-size: pxToRem(48);
                     line-height: 100%;
                     letter-spacing: pxToRem(-1.44);
@@ -223,6 +224,7 @@
                     color: $color-primary;
 
                     @media screen and (min-width: $toggleTablet) {
+                        margin-bottom: pxToRem(24);
                         font-size: pxToRem(24);
                         letter-spacing: pxToRem(-0.72);
                     }
@@ -259,6 +261,10 @@
                                 border: 1px solid $color-primary;
                                 color: $bg-primary;
                                 background: transparent;
+                            }
+
+                            @media screen and (min-width: $toggleTablet) {
+                                margin-bottom: pxToRem(24);
                             }
                         }
 
