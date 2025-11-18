@@ -65,12 +65,22 @@
 
             .icon2 {
                 position: absolute;
-                top: pxToRem(217);
+                top: pxToRem(232);
                 left: 48%;
                 transform: translateX(-50%);
                 width: 90%;
                 height: auto;
                 z-index: 10;
+
+                @media screen and (min-width: 390px) {
+                    top: pxToRem(227);
+                }
+                @media screen and (min-width: 412px) {
+                    top: pxToRem(220);
+                }
+                @media screen and (min-width: 414px) {
+                    top: pxToRem(215);
+                }
 
                 @media screen and (min-width: $toggleTablet) {
                     left: 52%;
@@ -98,7 +108,7 @@
                 }
 
                 .bg {
-                    height: pxToRem(400);
+                    height: 400px;
 
                     @media screen and (min-width: $toggleDesktop) {
                         height: 100%;
@@ -129,7 +139,7 @@
                     }
 
                     &.modulePlaced {
-                        top: pxToRem(115);
+                        top: pxToRem(118);
 
                         @media screen and (min-width: $toggleDesktop) {
                             top: pxToRem(345);
