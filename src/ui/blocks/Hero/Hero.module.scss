@@ -18,7 +18,7 @@
 
         .animationBlock {
             position: absolute;
-            top: -7%;
+            top: -100%;
             width: 97%;
             transition: top 1s ease;
 
@@ -37,7 +37,7 @@
                     top: -23%;
                 }
                 @media screen and (min-width: $toggleDesktop) {
-                    top: -4%;
+                    top: -11    %;
                 }
             }
 
@@ -58,7 +58,7 @@
 
                 }
                 @media screen and (min-width: $toggleDesktop) {
-                    top: -10%;
+                    top: pxToRem(-40);
                     left: 51%;
                 }
             }
@@ -78,8 +78,8 @@
                 }
                 @media screen and (min-width: $toggleDesktop) {
                     left: 51%;
-                    width: 100%;
-                    height: pxToRem(225);
+                    width: 48vw;
+                    height: auto;
                 }
             }
         }
@@ -110,6 +110,7 @@
                     top: -100%;
                     left: 0;
                     transition: top 1s ease;
+                    height: max-content;
 
                     @media screen and (min-width: $toggleTablet) {
                         left: 50%;
