@@ -16,6 +16,21 @@
             padding-bottom: pxToRem(0);
         }
 
+        .mainLogo {
+            position: absolute;
+            top: pxToRem(50);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 200;
+
+            svg {
+                width: pxToRem(92);
+                height: pxToRem(60);
+            }
+            @media screen and (min-width: $toggleDesktop) {
+                display: none;
+            }
+        }
         .animationBlock {
             position: absolute;
             top: -100%;
@@ -360,28 +375,37 @@
             }
             .tabs {
                 position: absolute;
-                top: pxToRem(121);
+                top: pxToRem(330);
+                left: 50%;
+                transform: translateX(-50%);
                 display: flex;
-                flex-direction: column;
                 align-items: flex-start;
-                gap: pxToRem(16);
+                width: 95%;
                 z-index: 10;
 
-                @media screen and (min-width: $toggleTablet) {
+                @media screen and (min-width: $toggleDesktop) {
                     position: initial;
                     top: initial;
+                    flex-direction: column;
+                    transform: initial;
                 }
 
                 button {
+                    height: pxToRem(44);
+                    padding: pxToRem(14);
                     font-family: "SF Pro Display";
-                    font-size: pxToRem(20);
+                    font-size: pxToRem(16);
                     font-weight: 400;
                     line-height: 100%;
                     letter-spacing: pxToRem(-0.6);
-                    color: #B0B0B0;
-                    background: transparent;
+                    background: $color-white;
+                    color: $color-primary;
                     cursor: pointer;
                     transition: $transition;
+
+                    @media screen and (max-width: 365px) {
+                        font-size: pxToRem(14);
+                    }
 
                     &.active,
                     &:hover {
@@ -390,14 +414,39 @@
 
                     &.active {
                         cursor: default;
+                        background: $color-primary;
+                        color: $color-white;
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            background: transparent;
+                            color: $color-primary;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        flex: 1 1 45%;
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            flex: 1 1 100%;
+                        }
+                    }
+                    &:nth-child(2) {
+                        flex: 1 1 55%;
+
+                        @media screen and (min-width: $toggleDesktop) {
+                            flex: 1 1 100%;
+                        }
                     }
 
                     @media screen and (min-width: $toggleTablet) {
-                        font-size: pxToRem(46);
-                        letter-spacing: pxToRem(-1.38);
+                        height: pxToRem(52);
+                        padding: pxToRem(14);
+                        font-size: pxToRem(24);
                     }
                     @media screen and (min-width: $toggleDesktop) {
-
+                        font-size: pxToRem(46);
+                        letter-spacing: pxToRem(-1.38);
+                        color: #B0B0B0;
                     }
                 }
             }
