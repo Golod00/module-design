@@ -59,7 +59,7 @@
                 }
                 @media screen and (min-width: $toggleDesktop) {
                     top: pxToRem(-40);
-                    left: 51%;
+                    left: 50%;
                 }
             }
 
@@ -86,11 +86,19 @@
                 }
 
                 @media screen and (min-width: $toggleTablet) {
+                    top: 190px;
                     left: 52%;
-                    width: pxToRem(360);
+                    width: pxToRem(500);
+                }
+                @media screen and (min-width: 820px) {
+                    top: 228px;
+                }
+                @media screen and (min-width: 1024px) {
+                    top: 267px;
                 }
                 @media screen and (min-width: $toggleDesktop) {
-                    left: 51%;
+                    top: pxToRem(168);
+                    left: 50%;
                     width: 48vw;
                     height: auto;
                 }
@@ -101,6 +109,7 @@
             @media screen and (min-width: $toggleDesktop) {
                 position: relative;
                 width: 59vw;
+                overflow: hidden;
             }
 
             .wrapImage {
@@ -128,24 +137,19 @@
                     @media screen and (min-width: $toggleTablet) {
                         left: 50%;
                         transform: translateX(-50%);
+                        width: pxToRem(500);
                     }
                     @media screen and (min-width: $toggleDesktop) {
                         transform: inherit;
+                        width: 100%;
                     }
 
-                    &.moduleDrop {
+                    &.moduleDrop,
+                    &.modulePlaced {
                         top: pxToRem(115);
 
                         @media screen and (min-width: $toggleDesktop) {
-                            top: pxToRem(345);
-                        }
-                    }
-
-                    &.modulePlaced {
-                        top: pxToRem(118);
-
-                        @media screen and (min-width: $toggleDesktop) {
-                            top: pxToRem(345);
+                            top: 40vh;
                         }
                     }
 
