@@ -133,6 +133,7 @@
                     left: 0;
                     transition: top 1s ease;
                     width: 90%;
+                    transform-origin: top center;
 
                     @media screen and (min-width: $toggleTablet) {
                         left: 50%;
@@ -144,6 +145,7 @@
                         width: 100%;
                     }
 
+                    /* Дом стоит на земле */
                     &.moduleDrop,
                     &.modulePlaced {
                         top: pxToRem(115);
@@ -153,8 +155,27 @@
                         }
                     }
 
+                    /* 🔥 Медленное качание при падении */
+                    &.moduleDrop {
+                        animation: swing 1.6s ease-in-out infinite;
+                    }
+
+                    /* 🔥 Медленное качание при подъеме */
                     &.moduleLift {
                         top: -100%;
+                        animation: swing 1.6s ease-in-out infinite;
+                    }
+
+                    /* Без качания после установки */
+                    &.modulePlaced {
+                        animation: none;
+                    }
+
+                    /* Медленный swing */
+                    @keyframes swing {
+                        0%   { transform: rotate(-1.5deg); }
+                        50%  { transform: rotate(1.5deg); }
+                        100% { transform: rotate(-1.5deg); }
                     }
 
                     @media screen and (min-width: $toggleDesktop) {

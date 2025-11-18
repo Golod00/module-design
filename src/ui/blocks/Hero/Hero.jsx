@@ -100,6 +100,7 @@ export default function Hero() {
                                 height={800}
                                 priority
                             />
+                            <div className="swingInner">
                             <div
                                 className={`
                                     ${classes.animationImage}
@@ -119,6 +120,7 @@ export default function Hero() {
                                         priority
                                     />
                                 </picture>
+                            </div>
                             </div>
                         </div>
                     )}
