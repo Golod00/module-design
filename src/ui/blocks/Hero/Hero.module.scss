@@ -65,11 +65,11 @@
 
             .icon2 {
                 position: absolute;
-                top: pxToRem(180);
-                left: 49%;
+                top: pxToRem(217);
+                left: 48%;
                 transform: translateX(-50%);
-                width: 100%;
-                height: pxToRem(199);
+                width: 90%;
+                height: auto;
                 z-index: 10;
 
                 @media screen and (min-width: $toggleTablet) {
@@ -110,7 +110,7 @@
                     top: -100%;
                     left: 0;
                     transition: top 1s ease;
-                    height: max-content;
+                    width: 90%;
 
                     @media screen and (min-width: $toggleTablet) {
                         left: 50%;
