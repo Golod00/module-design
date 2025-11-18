@@ -138,7 +138,7 @@ export default function Hero() {
                             />
                             <div
                                 className={`
-                                    ${classes.animationImage}
+                                    ${classes.animationImage} ${classes.animationImageDop}
                                     ${moduleState === "drop" ? classes.moduleDrop : ""}
                                     ${moduleState === "placed" ? classes.modulePlaced : ""}
                                     ${moduleState === "lift" ? classes.moduleLift : ""}
@@ -174,8 +174,8 @@ export default function Hero() {
                             Але ми вже готові відповісти на ваші питання
                         </p>
                         <div className={classes.linksBtn}>
-                            <a className={`${classes.link} ${classes.linkCall}`} href="">Подзвонити</a>
-                            <a className={`${classes.link} ${classes.linkWrite}`} href="">Написати</a>
+                            <a className={`${classes.link} ${classes.linkCall}`} href="tel:+380638868888">Подзвонити</a>
+                            <a className={`${classes.link} ${classes.linkWrite}`} href="http://t.me/ellenrud">Написати</a>
                         </div>
                         <div className={classes.socialWrap}>
                             <a className={classes.linkSocial} href="https://www.facebook.com/module.dsgn1" target="_blank">

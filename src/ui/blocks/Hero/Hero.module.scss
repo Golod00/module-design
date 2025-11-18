@@ -25,9 +25,6 @@
             @media screen and (min-width: $toggleTablet) {
                 left: 0;
             }
-            @media screen and (min-width: $toggleDesktop) {
-
-            }
 
             &.craneDown,
             &.craneUp {
@@ -37,7 +34,7 @@
                     top: -23%;
                 }
                 @media screen and (min-width: $toggleDesktop) {
-                    top: -10%;
+                    top: 0%;
                 }
             }
             &.craneCarry {
@@ -47,8 +44,11 @@
             &.craneDownDeep {
                 top: -28vh;
 
+                @media screen and (min-width: $toggleTablet) {
+                    top: -20vh;
+                }
                 @media screen and (min-width: $toggleDesktop) {
-                    top: -2%;
+                    top: 10vh;
                 }
             }
             &.craneUpDeep {
@@ -103,7 +103,7 @@
                     top: 267px;
                 }
                 @media screen and (min-width: $toggleDesktop) {
-                    top: pxToRem(168);
+                    top: 20vh;
                     left: 50%;
                     width: 48vw;
                     height: auto;
@@ -156,17 +156,31 @@
                         top: pxToRem(115);
 
                         @media screen and (min-width: $toggleDesktop) {
-                            top: 40vh;
+                            top: 50vh;
                         }
                     }
 
                     &.moduleDrop {
                         animation: swing 1.6s ease-in-out infinite;
+
+                        @media screen and (min-width: $toggleTablet) {
+                            animation: none;
+                        }
+                        @media screen and (min-width: $toggleDesktop) {
+                            animation: swing 1.6s ease-in-out infinite;
+                        }
                     }
 
                     &.moduleLift {
                         top: -100%;
                         animation: swing 1.6s ease-in-out infinite;
+
+                        @media screen and (min-width: $toggleTablet) {
+                            animation: none;
+                        }
+                        @media screen and (min-width: $toggleDesktop) {
+                            animation: swing 1.6s ease-in-out infinite;
+                        }
                     }
 
                     &.modulePlaced {
@@ -189,10 +203,12 @@
 
                         &.animationImageDop {
                             bottom: pxToRem(100);
-                            left: 1vw;
+                            left: initial;
+                            right: -2vw;
 
                             .imageB {
-                                width: 50vw;
+                                width: 100%;
+                                object-fit: contain;
                             }
                         }
                     }
@@ -222,7 +238,7 @@
                     margin-bottom: pxToRem(18);
 
                     @media screen and (min-width: $toggleDesktop) {
-                        margin-bottom: pxToRem(24);
+                        margin-bottom: pxToRem(16);
                     }
 
                     svg {
@@ -365,9 +381,15 @@
                     color: #B0B0B0;
                     background: transparent;
                     cursor: pointer;
+                    transition: $transition;
+
+                    &.active,
+                    &:hover {
+                        color: $color-primary;
+                    }
 
                     &.active {
-                        color: $color-primary;
+                        cursor: default;
                     }
 
                     @media screen and (min-width: $toggleTablet) {
