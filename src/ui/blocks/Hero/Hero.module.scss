@@ -81,6 +81,9 @@
                 @media screen and (min-width: 414px) {
                     top: pxToRem(215);
                 }
+                @media screen and (min-width: 440px) {
+                    top: pxToRem(205);
+                }
 
                 @media screen and (min-width: $toggleTablet) {
                     left: 52%;
