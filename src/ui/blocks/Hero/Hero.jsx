@@ -12,6 +12,7 @@ export default function Hero() {
     const [craneState, setCraneState] = useState("hidden");
     const [moduleState, setModuleState] = useState("hidden");
     const [pendingTab, setPendingTab] = useState(null);
+    const [isAnimating, setIsAnimating] = useState(false);
 
     useEffect(() => {
         function onLoad() {
@@ -29,8 +30,9 @@ export default function Hero() {
     }, []);
 
     async function handleChangeTab(tab) {
-        if (tab === activeTab || craneState !== "hidden") return;
+        if (tab === activeTab || isAnimating) return;
 
+        setIsAnimating(true);
         setPendingTab(tab);
 
         setCraneState("down");
@@ -56,6 +58,7 @@ export default function Hero() {
         await sleep(1000);
 
         setCraneState("hidden");
+        setIsAnimating(false);
     }
 
     async function runDropAnimation() {
@@ -174,7 +177,7 @@ export default function Hero() {
                             </svg>
                         </div>
                         <h1 className={classes.title}>
-                            Наш сайт ще на будівництві:(
+                            Наш сайт ще на будівництві:)
                         </h1>
                         <p className={classes.text}>
                             Але ми вже готові відповісти на ваші питання
@@ -198,7 +201,8 @@ export default function Hero() {
                     </div>
                     <div className={classes.tabs}>
                         <button
-                            className={activeTab === "commercial" ? classes.active : ""}
+                            disabled={isAnimating}
+                            className={`${activeTab === "commercial" ? classes.active : ""} ${isAnimating ? classes.disabled : ""}`}
                             onClick={() => handleChangeTab("commercial")}
                             type="button"
                         >
@@ -206,7 +210,8 @@ export default function Hero() {
                         </button>
 
                         <button
-                            className={activeTab === "hotels" ? classes.active : ""}
+                            disabled={isAnimating}
+                            className={`${activeTab === "hotels" ? classes.active : ""} ${isAnimating ? classes.disabled : ""}`}
                             onClick={() => handleChangeTab("hotels")}
                             type="button"
                         >
