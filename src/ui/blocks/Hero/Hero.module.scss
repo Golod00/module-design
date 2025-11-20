@@ -167,6 +167,11 @@
                         width: 100%;
                     }
 
+                    &.animationImageDop {
+                        width: 100%;
+                        left: 10px;
+                    }
+
                     &.moduleDrop,
                     &.modulePlaced {
                         top: 165px;
@@ -209,6 +214,10 @@
                         100% { transform: rotate(-1.5deg); }
                     }
 
+                    .imageB {
+                        width: 100%;
+                    }
+
                     @media screen and (min-width: $toggleDesktop) {
                         bottom: pxToRem(277);
                         left: 2.5vw;
@@ -218,8 +227,9 @@
                         }
 
                         &.animationImageDop {
+                            width: initial;
+                            left: 2vw;
                             bottom: pxToRem(100);
-                            left: initial;
                             right: -2vw;
 
                             .imageB {
