@@ -43,10 +43,10 @@
 
             &.craneDown,
             &.craneUp {
-                top: -29%;
+                top: -163px;
 
                 @media screen and (min-width: $toggleTablet) {
-                    top: -23%;
+                    top: -182px;
                 }
                 @media screen and (min-width: $toggleDesktop) {
                     top: 0%;
@@ -57,10 +57,10 @@
             }
 
             &.craneDownDeep {
-                top: -28vh;
+                top: -135px;
 
                 @media screen and (min-width: $toggleTablet) {
-                    top: -20vh;
+                    top: -125px;
                 }
                 @media screen and (min-width: $toggleDesktop) {
                     top: 0;
@@ -72,7 +72,7 @@
             .icon1 {
                 position: absolute;
                 top: 0;
-                left: 50%;
+                left: 49%;
                 transform: translateX(-50%);
                 width: pxToRem(96);
                 height: pxToRem(272);
@@ -86,7 +86,7 @@
 
             .icon2 {
                 position: absolute;
-                top: pxToRem(232);
+                top: pxToRem(220);
                 left: 48%;
                 transform: translateX(-50%);
                 width: 90%;
@@ -141,7 +141,8 @@
                 }
 
                 .bg {
-                    height: 400px;
+                    height: 472px;
+                    object-fit: fill;
 
                     @media screen and (min-width: $toggleDesktop) {
                         height: 100%;
@@ -168,7 +169,7 @@
 
                     &.moduleDrop,
                     &.modulePlaced {
-                        top: pxToRem(115);
+                        top: 165px;
 
                         @media screen and (min-width: $toggleDesktop) {
                             top: 50vh;
@@ -378,7 +379,7 @@
             }
             .tabs {
                 position: absolute;
-                top: pxToRem(330);
+                top: pxToRem(400);
                 left: 50%;
                 transform: translateX(-50%);
                 display: flex;

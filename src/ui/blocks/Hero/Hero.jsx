@@ -17,7 +17,7 @@ export default function Hero() {
         function onLoad() {
             setTimeout(() => {
                 runDropAnimation();
-            }, 1400);
+            }, 700);
         }
 
         if (document.readyState === 'complete') {
@@ -69,7 +69,6 @@ export default function Hero() {
 
         setCraneState("hidden");
     }
-
 
     return (
         <section className={classes.heroSection}>
